@@ -176,6 +176,7 @@ def vit_b16(
     pretrained=True,
     pretrained_top=True,
     weights="imagenet21k+imagenet2012",
+    input_features=3,
 ):
     """Build ViT-B16. All arguments passed to build_model."""
     if pretrained_top:
@@ -194,6 +195,7 @@ def vit_b16(
         activation=activation,
         include_top=include_top,
         representation_size=768 if weights == "imagenet21k" else None,
+        input_features=input_features,
     )
 
     if pretrained:
@@ -216,6 +218,7 @@ def vit_b32(
     pretrained=True,
     pretrained_top=True,
     weights="imagenet21k+imagenet2012",
+    input_features=3,
 ):
     """Build ViT-B32. All arguments passed to build_model."""
     if pretrained_top:
@@ -234,6 +237,7 @@ def vit_b32(
         activation=activation,
         include_top=include_top,
         representation_size=768 if weights == "imagenet21k" else None,
+        input_features=input_features,
     )
     if pretrained:
         load_pretrained(
@@ -255,6 +259,7 @@ def vit_l16(
     pretrained=True,
     pretrained_top=True,
     weights="imagenet21k+imagenet2012",
+    input_features=3,
 ):
     """Build ViT-L16. All arguments passed to build_model."""
     if pretrained_top:
@@ -273,6 +278,7 @@ def vit_l16(
         activation=activation,
         include_top=include_top,
         representation_size=1024 if weights == "imagenet21k" else None,
+        input_features=input_features,
     )
     if pretrained:
         load_pretrained(
@@ -294,6 +300,7 @@ def vit_l32(
     pretrained=True,
     pretrained_top=True,
     weights="imagenet21k+imagenet2012",
+    input_features=3,
 ):
     """Build ViT-L32. All arguments passed to build_model."""
     if pretrained_top:
@@ -312,6 +319,7 @@ def vit_l32(
         activation=activation,
         include_top=include_top,
         representation_size=1024 if weights == "imagenet21k" else None,
+        input_features=input_features,
     )
     if pretrained:
         load_pretrained(
