@@ -177,6 +177,7 @@ def vit_b16(
     pretrained_top=True,
     weights="imagenet21k+imagenet2012",
     input_features=3,
+    patch_size=16,
 ):
     """Build ViT-B16. All arguments passed to build_model."""
     if pretrained_top:
@@ -189,7 +190,7 @@ def vit_b16(
     model = build_model(
         **CONFIG_B,
         name="vit-b16",
-        patch_size=16,
+        patch_size=patch_size,
         image_size=image_size,
         classes=classes,
         activation=activation,
